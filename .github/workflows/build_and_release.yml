@@ -27,8 +27,8 @@ jobs:
 
     - name: Build binary
       run: |
-        pyinstaller --onefile calc_functions.py  
-        mv dist/calc_functions dist/calc_functions.bin
+        pyinstaller --onefile functions.py  
+        mv dist/calc_functions dist/functions.bin
 
     - name: Create release
       id: create_release
@@ -47,6 +47,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.NAME }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./dist/calc_functions.bin
-        asset_name: calc_functions.bin
+        asset_path: ./dist/functions.bin
+        asset_name: functions.bin
         asset_content_type: application/octet-stream
