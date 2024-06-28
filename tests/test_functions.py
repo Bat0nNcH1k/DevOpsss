@@ -1,7 +1,7 @@
 # DO NOT EDIT
 import pytest
 
-from main import add, subtract, multiply, divide
+from func import add, subtract, multiply, divide
 
 @pytest.mark.parametrize(
     ('x','y','ans'),
