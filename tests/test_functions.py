@@ -16,7 +16,7 @@ def test_add(x,y,ans):
     ('x','y','ans'),
     [(1,2,-1),
      (-100,20,-120),
-     (9,9,0)]
+     (9,9,3)]
 )
 def test_subtract(x,y,ans):
     assert subtract(x, y) == ans
